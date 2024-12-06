@@ -1,0 +1,28 @@
+#!/usr/bin/java --source 17
+public class Main {
+
+    public String parseInput(String f) {
+        //ArrayList<ArrayList<char>> m1;
+        String m1 = "";
+        Path path = Path.of(file);
+        try (BufferedReader reader = Files.newBufferedReader(path);
+                Stream<String> lines = reader.lines();) {
+            m1 += lines;
+            
+        }
+
+        return m1;
+    }
+
+    public static void main(String... args) {
+        String file = "test";
+
+        if(args.length > 0) {
+            file = args[0];
+        }
+
+        var out = parseInput(file);
+
+        System.out.println(out);
+    }
+}
